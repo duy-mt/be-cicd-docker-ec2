@@ -1,0 +1,14 @@
+name: Deploy Node Application
+
+on: 
+  push: 
+  branches:
+  - main
+
+jobs: 
+  build: 
+  runs-on: ubuntu--lastest
+  steps: 
+    - name: Checkout source
+      uses: actions/checkout@v4
+      
