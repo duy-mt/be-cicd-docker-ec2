@@ -36,4 +36,4 @@ jobs:
       - name: Delete old container
         run: docker rm -f be-cicd-docker-ec2-container
       - name: Run docker container
-        run: docker container -d -p 4000:4000 --name be-cicd-docker-ec2-container duymt3/be-cicd-docker-ec2
+        run: docker run -d -p 4000:4000 --name be-cicd-docker-ec2-container duymt3/be-cicd-docker-ec2
