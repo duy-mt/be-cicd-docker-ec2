@@ -32,7 +32,7 @@ jobs:
     runs-on: self-hosted
     steps:
       - name: Pull image from docker hub
-        run: docker pull duymt3/be-cicd-docker-ec2:lastest
+        run: docker pull duymt3/be-cicd-docker-ec2
       - name: Delete old container
         run: docker rm -f be-cicd-docker-ec2-container
       - name: Run docker container
