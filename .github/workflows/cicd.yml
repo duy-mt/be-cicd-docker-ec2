@@ -18,8 +18,8 @@ jobs:
           echo "DATABASE_PASSWORD=${{secrets.DATABASE_PASSWORD}}" >> .env
           echo "DATABASE_NAME=${{secrets.DATABASE_NAME}}" >> .env
           echo "DATABASE_PORT=${{secrets.DATABASE_PORT}}" >> .env
-          echo "PORT=${{secrets.DATABASE_PORT}}" >> .env
-          echo "COR_ORIGIN=COR_ORIGIN" >> .env
+          echo "PORT=${{secrets.PORT}}" >> .env
+          echo "COR_ORIGIN=${{secrets.COR_ORIGIN}}" >> .env
       - name: Login to docker hub
         run: docker login -u ${{ secrets.DOCKER_USERNAME }} -p ${{ secrets.DOCKER_PASSWORD }}       
       - name: Build docker image
